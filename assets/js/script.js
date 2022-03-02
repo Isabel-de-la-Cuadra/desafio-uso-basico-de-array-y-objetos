@@ -37,26 +37,25 @@ function dibujarTablaRadiologia() {
         Prevision: 'ISAPRE'
     }, ];
 
-    var titulos01 = document.getElementById("titulos01"); //dónde escribiremos
-
-    var textoTitulo = ""; //acumuladora = acumuladora + algo
+    var titulos01 = document.getElementById("titulos01");
+    var textoTitulo = "";
     var cabeceraColumnas = document.getElementById("cabeceraColumnas");
     for (let clave in Radiologia[0]) {
         textoTitulo = textoTitulo + "<th scope='col'>" + clave.toUpperCase() + "</th>";
     }
     titulos01.innerHTML = textoTitulo
 
-    //contenido dinámico
-    var valores01 = document.getElementById("valores01"); //donde escribiremos
-    var textoValores = ""; //acumuladora = acumuladora + algo
-    for (let objeto of Radiologia) { //objeto 1  recorremos el arreglo
-        var valorFilaTr = ""; // acumuladora interna
-        for (let clave in objeto) { //recorremos los objetos internos
-            valorFilaTr = valorFilaTr + "<td>" + objeto[clave] + "</td>"; //obtener el valor de la clave
+
+    var valores01 = document.getElementById("valores01");
+    var textoValores = "";
+    for (let objeto of Radiologia) {
+        var valorFilaTr = "";
+        for (let clave in objeto) {
+            valorFilaTr = valorFilaTr + "<td>" + objeto[clave] + "</td>";
         }
         textoValores = textoValores + "<tr>" + valorFilaTr + "</tr>"
     }
-    valores01.innerHTML = textoValores //insertar en el elemento
+    valores01.innerHTML = textoValores
 };
 
 $("#btn1").click(function() {
@@ -108,26 +107,25 @@ function dibujarTablaTraumatologia() {
         Prevision: 'ISAPRE'
     }, ];
 
-    var titulos02 = document.getElementById("titulos02"); //dónde escribiremos
-
-    var textoTitulo = ""; //acumuladora = acumuladora + algo
+    var titulos02 = document.getElementById("titulos02");
+    var textoTitulo = "";
     var cabeceraColumnas = document.getElementById("cabeceraColumnas");
     for (let clave in Traumatologia[0]) {
         textoTitulo = textoTitulo + "<th scope='col'>" + clave.toUpperCase() + "</th>";
     }
     titulos02.innerHTML = textoTitulo
 
-    //contenido dinámico
-    var valores02 = document.getElementById("valores02"); //donde escribiremos
-    var textoValores = ""; //acumuladora = acumuladora + algo
-    for (let objeto of Traumatologia) { //objeto 1  recorremos el arreglo
-        var valorFilaTr = ""; // acumuladora interna
-        for (let clave in objeto) { //recorremos los objetos internos
-            valorFilaTr = valorFilaTr + "<td>" + objeto[clave] + "</td>"; //obtener el valor de la clave
+
+    var valores02 = document.getElementById("valores02");
+    var textoValores = "";
+    for (let objeto of Traumatologia) {
+        var valorFilaTr = "";
+        for (let clave in objeto) {
+            valorFilaTr = valorFilaTr + "<td>" + objeto[clave] + "</td>";
         }
         textoValores = textoValores + "<tr>" + valorFilaTr + "</tr>"
     }
-    valores02.innerHTML = textoValores //insertar en el elemento
+    valores02.innerHTML = textoValores
 };
 
 $("#btn2").click(function() {
@@ -173,26 +171,24 @@ function dibujarTablaDental() {
         Prevision: 'ISAPRE'
     }, ];
 
-    var titulos03 = document.getElementById("titulos03"); //dónde escribiremos
-
-    var textoTitulo = ""; //acumuladora = acumuladora + algo
+    var titulos03 = document.getElementById("titulos03");
+    var textoTitulo = "";
     var cabeceraColumnas = document.getElementById("cabeceraColumnas");
     for (let clave in Dental[0]) {
         textoTitulo = textoTitulo + "<th scope='col'>" + clave.toUpperCase() + "</th>";
     }
     titulos03.innerHTML = textoTitulo
 
-    //contenido dinámico
-    var valores03 = document.getElementById("valores03"); //donde escribiremos
-    var textoValores = ""; //acumuladora = acumuladora + algo
-    for (let objeto of Dental) { //objeto 1  recorremos el arreglo
-        var valorFilaTr = ""; // acumuladora interna
-        for (let clave in objeto) { //recorremos los objetos internos
-            valorFilaTr = valorFilaTr + "<td>" + objeto[clave] + "</td>"; //obtener el valor de la clave
+    var valores03 = document.getElementById("valores03");
+    var textoValores = "";
+    for (let objeto of Dental) {
+        var valorFilaTr = "";
+        for (let clave in objeto) {
+            valorFilaTr = valorFilaTr + "<td>" + objeto[clave] + "</td>";
         }
         textoValores = textoValores + "<tr>" + valorFilaTr + "</tr>"
     }
-    valores03.innerHTML = textoValores //insertar en el elemento
+    valores03.innerHTML = textoValores
 };
 
 $("#btn3").click(function() {
@@ -241,7 +237,7 @@ function primerUltimoPacienteRadiologia() {
     var primerUltimoPacienteRadiologia = document.getElementById("primerUltimoPacienteRadiologia");
 
     for (let i = 0; i < Radiologia.length; i++) {
-        primerUltimoPacienteRadiologia.innerHTML = `<h4 id="primerUltimoPacienteRadiologia">Primera atención: ${Radiologia[0].Paciente} - ${Radiologia[0].Prevision} | Última atención: ${Radiologia[5].Paciente} - ${Radiologia[5].Prevision} </h4>`;
+        primerUltimoPacienteRadiologia.innerHTML = `<h4 id="primerUltimoPacienteRadiologia">Primera atención: ${Radiologia[0].Paciente} - ${Radiologia[0].Prevision} | Última atención: ${Radiologia[Radiologia.length-1].Paciente} - ${Radiologia[Radiologia.length-1].Prevision} </h4>`;
     }
 
 };
@@ -299,7 +295,7 @@ function primerUltimoPacienteTraumatologia() {
     var primerUltimoPacienteTraumatologia = document.getElementById("primerUltimoPacienteTraumatologia");
 
     for (let i = 0; i < Traumatologia.length; i++) {
-        primerUltimoPacienteTraumatologia.innerHTML = `<h4 id="primerUltimoPacienteTraumatologia">Primera atención: ${Traumatologia[0].Paciente} - ${Traumatologia[0].Prevision} | Última atención: ${Traumatologia[6].Paciente} - ${Traumatologia[6].Prevision}</h4>`;
+        primerUltimoPacienteTraumatologia.innerHTML = `<h4 id="primerUltimoPacienteTraumatologia">Primera atención: ${Traumatologia[0].Paciente} - ${Traumatologia[0].Prevision} | Última atención: ${Traumatologia[Traumatologia.length-1].Paciente} - ${Traumatologia[Traumatologia.length-1].Prevision}</h4>`;
     }
 
 };
@@ -350,7 +346,7 @@ function primerUltimoPacienteDental() {
     var primerUltimoPacienteDental = document.getElementById("primerUltimoPacienteDental");
 
     for (let i = 0; i < Dental.length; i++) {
-        primerUltimoPacienteDental.innerHTML = `<h4 id="primerUltimoPacienteDental">Primera atención: ${Dental[0].Paciente} - ${Dental[0].Prevision} | Última atención: ${Dental[5].Paciente} - ${Dental[5].Prevision}</h4>`;
+        primerUltimoPacienteDental.innerHTML = `<h4 id="primerUltimoPacienteDental">Primera atención: ${Dental[0].Paciente} - ${Dental[Dental.length-1].Prevision} | Última atención: ${Dental[Dental.length-1].Paciente} - ${Dental[5].Prevision}</h4>`;
     }
 
 };
