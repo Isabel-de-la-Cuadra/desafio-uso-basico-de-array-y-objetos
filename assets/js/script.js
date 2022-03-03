@@ -188,5 +188,5 @@ valores03.innerHTML = textoValores
 var primerUltimoPacienteDental = document.getElementById("primerUltimoPacienteDental");
 
 for (let i = 0; i < Dental.length; i++) {
-    primerUltimoPacienteDental.innerHTML = `<h4 id="primerUltimoPacienteDental">Primera atención: ${Dental[0].Paciente} - ${Dental[Dental.length-1].Prevision} | Última atención: ${Dental[Dental.length-1].Paciente} - ${Dental[5].Prevision}</h4>`;
+    primerUltimoPacienteDental.innerHTML = `<h4 id="primerUltimoPacienteDental">Primera atención: ${Dental[0].Paciente} - ${Dental[0].Prevision} | Última atención: ${Dental[Dental.length-1].Paciente} - ${Dental[Dental.length-1].Prevision}</h4>`;
 }
