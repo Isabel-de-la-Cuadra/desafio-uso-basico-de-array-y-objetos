@@ -1,40 +1,34 @@
 function dibujarTablaRadiologia() {
     let Radiologia = [{
-        Hora: '8:30',
-        Especialista: 'Andrea Zúñiga',
-        Paciente: 'Marcela Retamal',
-        Rut: '11123425-6',
-        Prevision: 'ISAPRE'
-    }, {
         Hora: '11:00',
-        Especialista: 'María Pia Zañartu',
-        Paciente: 'Angel Muñoz',
-        Rut: '9878789-2',
-        Prevision: 'ISAPRE'
+        Especialista: 'Ignacio Schulz',
+        Paciente: 'Francisca Rojas',
+        Rut: '9878782-1-6',
+        Prevision: 'FONASA'
     }, {
         Hora: '11:30',
-        Especialista: 'Scarlett Witting',
-        Paciente: 'Mario Kast',
-        Rut: '7998789-5',
-        Prevision: 'FONASA'
-    }, {
-        Hora: '13:00',
-        Especialista: 'Francisco Von Teuber',
-        Paciente: 'Karin Fernandez',
-        Rut: '18887662-K',
-        Prevision: 'FONASA'
-    }, {
-        Hora: '13:30',
-        Especialista: 'Eduardo Viñuela',
-        Paciente: 'Hugo Sanchez',
-        Rut: '17665461-4',
-        Prevision: 'FONASA'
-    }, {
-        Hora: '14:00',
-        Especialista: 'Raquel Villaseca',
-        Paciente: 'Ana Sepulveda',
-        Rut: '14441281-0',
+        Especialista: 'Federico Subercaseaux',
+        Paciente: 'Pamela Estrada',
+        Rut: '15345241-3',
         Prevision: 'ISAPRE'
+    }, {
+        Hora: '15:00',
+        Especialista: 'Fernando Wurthz',
+        Paciente: 'Armando Luna',
+        Rut: '16445345-9',
+        Prevision: 'ISAPRE'
+    }, {
+        Hora: '15:30',
+        Especialista: 'Ana María Godoy',
+        Paciente: 'Manuel Godoy',
+        Rut: '17666419-0',
+        Prevision: 'FONASA'
+    }, {
+        Hora: '16:00',
+        Especialista: 'Patricia Suazo',
+        Paciente: 'Ramón Ulloa',
+        Rut: '14989389-K',
+        Prevision: 'FONASA'
     }, ];
 
     var titulos01 = document.getElementById("titulos01");
@@ -197,41 +191,35 @@ $("#btn3").click(function() {
 
 function primerUltimoPacienteRadiologia() {
     let Radiologia = [{
-        Hora: '8:30',
-        Especialista: 'Andrea Zúñiga',
-        Paciente: 'Marcela Retamal',
-        Rut: '11123425-6',
-        Prevision: 'ISAPRE'
-    }, {
         Hora: '11:00',
-        Especialista: 'María Pia Zañartu',
-        Paciente: 'Angel Muñoz',
-        Rut: '9878789-2',
-        Prevision: 'ISAPRE'
+        Especialista: 'Ignacio Schulz',
+        Paciente: 'Francisca Rojas',
+        Rut: '9878782-1-6',
+        Prevision: 'FONASA'
     }, {
         Hora: '11:30',
-        Especialista: 'Scarlett Witting',
-        Paciente: 'Mario Kast',
-        Rut: '7998789-5',
-        Prevision: 'FONASA'
-    }, {
-        Hora: '13:00',
-        Especialista: 'Francisco Von Teuber',
-        Paciente: 'Karin Fernandez',
-        Rut: '18887662-K',
-        Prevision: 'FONASA'
-    }, {
-        Hora: '13:30',
-        Especialista: 'Eduardo Viñuela',
-        Paciente: 'Hugo Sanchez',
-        Rut: '17665461-4',
-        Prevision: 'FONASA'
-    }, {
-        Hora: '14:00',
-        Especialista: 'Raquel Villaseca',
-        Paciente: 'Ana Sepulveda',
-        Rut: '14441281-0',
+        Especialista: 'Federico Subercaseaux',
+        Paciente: 'Pamela Estrada',
+        Rut: '15345241-3',
         Prevision: 'ISAPRE'
+    }, {
+        Hora: '15:00',
+        Especialista: 'Fernando Wurthz',
+        Paciente: 'Armando Luna',
+        Rut: '16445345-9',
+        Prevision: 'ISAPRE'
+    }, {
+        Hora: '15:30',
+        Especialista: 'Ana María Godoy',
+        Paciente: 'Manuel Godoy',
+        Rut: '17666419-0',
+        Prevision: 'FONASA'
+    }, {
+        Hora: '16:00',
+        Especialista: 'Patricia Suazo',
+        Paciente: 'Ramón Ulloa',
+        Rut: '14989389-K',
+        Prevision: 'FONASA'
     }, ];
 
     var primerUltimoPacienteRadiologia = document.getElementById("primerUltimoPacienteRadiologia");
